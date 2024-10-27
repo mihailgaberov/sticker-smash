@@ -1,4 +1,4 @@
-import { View, Image, ImageSourcePropType } from "react-native";
+import { Image, View } from "react-native";
 import { Gesture, GestureDetector } from "react-native-gesture-handler";
 import Animated, {
   useAnimatedStyle,
@@ -33,16 +33,15 @@ export default function EmojiSticker({ imageSize, stickerSource }: Props) {
     };
   });
 
-  // Convert stickerSource to ImageSourcePropType
-  const imageSource: ImageSourcePropType = { uri: stickerSource };
-
   return (
     <View style={{ top: -350 }}>
-      <AnimatedImage
-        source={imageSource}
-        resizeMode="contain"
-        style={{ width: imageSize, height: imageSize }}
-      />
+      <GestureDetector gesture={doubleTap}>
+        <AnimatedImage
+          source={stickerSource}
+          resizeMode="contain"
+          style={[imageStyle, { width: imageSize, height: imageSize }]}
+        />
+      </GestureDetector>
     </View>
   );
 }
