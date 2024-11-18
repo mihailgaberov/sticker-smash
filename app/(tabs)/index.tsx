@@ -1,18 +1,18 @@
-import { Text, View, StyleSheet, Platform } from "react-native";
-import * as ImagePicker from "expo-image-picker";
-import { useRef, useState } from "react";
-import { GestureHandlerRootView } from "react-native-gesture-handler";
-import * as MediaLibrary from "expo-media-library";
-import { captureRef } from "react-native-view-shot";
 import domtoimage from "dom-to-image";
+import * as ImagePicker from "expo-image-picker";
+import * as MediaLibrary from "expo-media-library";
+import { useRef, useState } from "react";
+import { Platform, StyleSheet, View } from "react-native";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
+import { captureRef } from "react-native-view-shot";
 
-import ImageViewer from "@/app/components/ImageViewer";
 import Button from "@/app/components/Button";
-import IconButton from "@/app/components/IconButton";
 import CircleButton from "@/app/components/CircleButton";
-import EmojiPicker from "@/app/components/EmojiPicker";
 import EmojiList from "@/app/components/EmojiList";
+import EmojiPicker from "@/app/components/EmojiPicker";
 import EmojiSticker from "@/app/components/EmojiSticker";
+import IconButton from "@/app/components/IconButton";
+import ImageViewer from "@/app/components/ImageViewer";
 import { StatusBar } from "expo-status-bar";
 const PlaceholderImage = require("@/assets/images/background-image.png");
 
